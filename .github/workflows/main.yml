@@ -14,4 +14,4 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run "55929745-d1325605-2d00-4315-a3aa-28889473db70" -e "ed51dacd-9d56-4a38-a633-38c543fa18ed" --report-events
+          postman collection run "55929745-d1325605-2d00-4315-a3aa-28889473db70" -e "./postman/environments/Production-Kavyansh-1.environment.yaml" --report-events
