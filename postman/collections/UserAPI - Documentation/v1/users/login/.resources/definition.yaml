@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  ## Login
+
+  Authenticate an existing user with their username and password. On success, returns a JWT token to be used for authenticated requests.
+order: 2000

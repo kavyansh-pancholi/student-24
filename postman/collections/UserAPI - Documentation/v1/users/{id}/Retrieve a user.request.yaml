@@ -1,0 +1,39 @@
+$kind: http-request
+description: |-
+  Retrieves the profile details of a specific user by their numeric ID.
+
+  **Path Variables**
+  | Variable | Type | Required | Description |
+  |----------|------|----------|-------------|
+  | `id` | integer | ✅ | The unique numeric ID of the user |
+
+  **Responses**
+  | Status | Description |
+  |--------|-------------|
+  | `200 OK` | Returns the user object with `id` and `username` |
+  | `404 Not Found` | No user found with the given ID |
+  | `500 Internal Server Error` | An unexpected error occurred |
+url: '{{baseUrl}}/v1/users/:id'
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: "3777"
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+examples: ./.resources/Retrieve a user.resources/examples
+order: 1000

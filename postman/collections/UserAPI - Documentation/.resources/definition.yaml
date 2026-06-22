@@ -1,0 +1,30 @@
+$kind: collection
+description: |-
+  # UserAPI - Documentation
+
+  A RESTful API for managing user accounts. This collection covers the full lifecycle of a user — from registration and authentication to profile management and deletion.
+
+  ## Base URL
+  All requests use the `{{baseUrl}}` variable. Set this in your active environment (e.g. `http://localhost:3000`).
+
+  ## Authentication
+  All endpoints (except `/register` and `/login`) require an API key passed in the `X-API-Key` header. Use the `{{apiKey}}` environment variable to supply your key.
+
+  ## Endpoints Overview
+  | Method | Endpoint | Description |
+  |--------|----------|-------------|
+  | POST | `/v1/users/register` | Register a new user account |
+  | POST | `/v1/users/login` | Authenticate and receive a token |
+  | GET | `/v1/users/:id` | Retrieve a user by ID |
+  | PUT | `/v1/users/:id` | Update a user's details |
+  | DELETE | `/v1/users/:id` | Delete a user account |
+variables:
+  baseUrl: /
+auth:
+  - id: 3dd622be-ffcd-45fe-a1ac-b37e5d470233
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: X-API-Key
+      value: "{{apiKey}}"
+      in: header

@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  ## User by ID
+
+  Endpoints that operate on a specific user identified by their numeric `id` path parameter. Supports retrieving, updating, and deleting a user record. Requires a valid `X-API-Key` header.
+order: 3000
