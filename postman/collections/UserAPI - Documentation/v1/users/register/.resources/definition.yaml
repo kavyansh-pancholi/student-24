@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  ## Register
+
+  Create a new user account by providing a username and password. On success, returns the new user's ID, username, and an authentication token.
+order: 1000

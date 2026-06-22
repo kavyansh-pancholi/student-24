@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  ## Users
+
+  Endpoints for managing user accounts. Supports creating new users, authenticating existing users, and performing CRUD operations on individual user records.
+order: 1000

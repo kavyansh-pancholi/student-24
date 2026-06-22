@@ -1,0 +1,41 @@
+$kind: http-request
+description: |-
+  Creates a new user account.
+
+  **Request Body**
+  | Field | Type | Required | Description |
+  |-------|------|----------|-------------|
+  | `username` | string | ✅ | The desired username for the new account |
+  | `password` | string | ✅ | The account password |
+
+  **Responses**
+  | Status | Description |
+  |--------|-------------|
+  | `201 Created` | User registered successfully. Returns `id`, `username`, and `token` |
+  | `500 Internal Server Error` | An unexpected error occurred |
+url: '{{baseUrl}}/v1/users/register'
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "string",
+      "password": "string"
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    }
+examples: ./.resources/Register a new user.resources/examples
+order: 1000

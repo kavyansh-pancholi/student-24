@@ -1,0 +1,6 @@
+$kind: collection
+description: |-
+  ## Version 1 (v1)
+
+  All User API endpoints are versioned under `/v1`. This folder groups all v1 resources, ensuring backward compatibility as the API evolves.
+order: 1000
